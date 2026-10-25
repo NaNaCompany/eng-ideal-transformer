@@ -1,0 +1,59 @@
+{
+  "id": "E082",
+  "slug": "eng-ideal-transformer",
+  "title": "이상 변압기 전압 계산기",
+  "title_en": "Ideal Transformer Voltage Calculator",
+  "category": "전기",
+  "category_en": "Electrical engineering",
+  "fields": [
+    {
+      "key": "v",
+      "label": "1차 실효전압 V₁",
+      "label_en": "Primary RMS voltage V₁",
+      "dimension": "voltage",
+      "example": 100,
+      "constraint": "nonnegative",
+      "display_unit": "V",
+      "display_value": "100"
+    },
+    {
+      "key": "n1",
+      "label": "1차 권선수 N₁",
+      "label_en": "Primary turns N₁",
+      "dimension": "turns",
+      "example": 500,
+      "constraint": "integer",
+      "display_unit": "turn",
+      "display_value": "500"
+    },
+    {
+      "key": "n2",
+      "label": "2차 권선수 N₂",
+      "label_en": "Secondary turns N₂",
+      "dimension": "turns",
+      "example": 100,
+      "constraint": "integer",
+      "display_unit": "turn",
+      "display_value": "100"
+    }
+  ],
+  "result_label": "2차 실효전압 V₂",
+  "result_label_en": "Secondary RMS voltage V₂",
+  "result_dimension": "voltage",
+  "formula": "V₂ = V₁N₂/N₁",
+  "purpose": "권선비로 이상적인 교류 변압기의 2차 전압 계산",
+  "purpose_en": "Calculate ideal AC transformer secondary voltage from the turns ratio.",
+  "assumptions": "V₁≥0, N₁,N₂는 양의 정수. 이상 결합·교류 정상상태 모델이다. 직류 입력·코어 손실·누설·부하 전압강하·정격 출력은 제외한다.",
+  "assumptions_en": "Required: V₁≥0 and positive integer turn counts in an ideal coupled AC transformer. Excluded: DC operation, core loss, leakage, load regulation and power ratings.",
+  "sources": [
+    {
+      "label": "OpenStax · 15 6 transformers",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/15-6-transformers"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-ideal-transformer/",
+  "repository": "https://github.com/NaNaCompany/eng-ideal-transformer",
+  "output_unit": "V"
+}
